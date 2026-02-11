@@ -1,0 +1,6 @@
+F:\Ado.Net\BooksDataAccessLib\bin\Debug\BooksDataAccessLib.dll
+F:\Ado.Net\BooksDataAccessLib\bin\Debug\BooksDataAccessLib.pdb
+F:\Ado.Net\BooksDataAccessLib\obj\Debug\LibDataAccessLib.csproj.AssemblyReference.cache
+F:\Ado.Net\BooksDataAccessLib\obj\Debug\LibDataAccessLib.csproj.CoreCompileInputs.cache
+F:\Ado.Net\BooksDataAccessLib\obj\Debug\BooksDataAccessLib.dll
+F:\Ado.Net\BooksDataAccessLib\obj\Debug\BooksDataAccessLib.pdb

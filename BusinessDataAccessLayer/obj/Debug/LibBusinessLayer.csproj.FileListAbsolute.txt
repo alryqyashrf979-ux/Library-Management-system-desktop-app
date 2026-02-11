@@ -1,0 +1,9 @@
+F:\Ado.Net\BusinessDataAccessLayer\bin\Debug\BusinessDataAccessLayer.dll
+F:\Ado.Net\BusinessDataAccessLayer\bin\Debug\BusinessDataAccessLayer.pdb
+F:\Ado.Net\BusinessDataAccessLayer\bin\Debug\BooksDataAccessLib.dll
+F:\Ado.Net\BusinessDataAccessLayer\bin\Debug\BooksDataAccessLib.pdb
+F:\Ado.Net\BusinessDataAccessLayer\obj\Debug\LibBusinessLayer.csproj.AssemblyReference.cache
+F:\Ado.Net\BusinessDataAccessLayer\obj\Debug\LibBusinessLayer.csproj.CoreCompileInputs.cache
+F:\Ado.Net\BusinessDataAccessLayer\obj\Debug\LibBusin.976785AB.Up2Date
+F:\Ado.Net\BusinessDataAccessLayer\obj\Debug\BusinessDataAccessLayer.dll
+F:\Ado.Net\BusinessDataAccessLayer\obj\Debug\BusinessDataAccessLayer.pdb
