@@ -1,0 +1,22 @@
+F:\Ado.Net\Library Management System 2\bin\Debug\Library Management System 2.exe.config
+F:\Ado.Net\Library Management System 2\bin\Debug\Library Management System 2.exe
+F:\Ado.Net\Library Management System 2\bin\Debug\Library Management System 2.pdb
+F:\Ado.Net\Library Management System 2\obj\Debug\Library Management System 2.csproj.AssemblyReference.cache
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.Form1.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.Properties.Resources.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library Management System 2.csproj.GenerateResource.cache
+F:\Ado.Net\Library Management System 2\obj\Debug\Library Management System 2.csproj.CoreCompileInputs.cache
+F:\Ado.Net\Library Management System 2\obj\Debug\Library Management System 2.exe
+F:\Ado.Net\Library Management System 2\obj\Debug\Library Management System 2.pdb
+F:\Ado.Net\Library Management System 2\obj\Debug\Library Management System 2.exe.config
+F:\Ado.Net\Library Management System 2\bin\Debug\BusinessDataAccessLayer.dll
+F:\Ado.Net\Library Management System 2\bin\Debug\BooksDataAccessLib.dll
+F:\Ado.Net\Library Management System 2\bin\Debug\BusinessDataAccessLayer.pdb
+F:\Ado.Net\Library Management System 2\bin\Debug\BooksDataAccessLib.pdb
+F:\Ado.Net\Library Management System 2\obj\Debug\Library .563B8D17.Up2Date
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.frmAddBook.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.FrmAddMember.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.ShowMemberDetailsForm.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.FrmLendBook.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.FrmShowMemberForLendingPurpose.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.ReserveBook.resources
