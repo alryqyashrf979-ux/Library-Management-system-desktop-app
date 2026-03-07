@@ -140,9 +140,9 @@
             this.ShowLbMemberID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowLbMemberID.Location = new System.Drawing.Point(383, 47);
             this.ShowLbMemberID.Name = "ShowLbMemberID";
-            this.ShowLbMemberID.Size = new System.Drawing.Size(28, 24);
+            this.ShowLbMemberID.Size = new System.Drawing.Size(37, 24);
             this.ShowLbMemberID.TabIndex = 64;
-            this.ShowLbMemberID.Text = "??";
+            this.ShowLbMemberID.Text = "???";
             // 
             // Showlabel1
             // 
