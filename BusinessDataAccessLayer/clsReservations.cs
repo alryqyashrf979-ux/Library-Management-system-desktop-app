@@ -116,6 +116,14 @@ namespace BusinessDataAccessLayer
         {
             return clsReservationsDataAccessLayer.FilterByAvailibilty(Availibilty);
         }
+        static public int Count()
+        {
+            return clsReservationsDataAccessLayer.Count();
+        }
+        static public void UpdateReservationsAvailibility()
+        {
+             clsReservationsDataAccessLayer.UpdateReservationAvailibilty();
+        }
     }
 }
 

@@ -83,6 +83,7 @@ namespace Library_Management_System_2
                     reservation.ReservationDate = DateTime.Now;
                     reservation.MemberID = _MemberID;
                     reservation.BookID = Book.BookID;
+                    reservation.Availibilty = (Book.Quantity > 0) ;
 
                     if (reservation.Save())
                     {

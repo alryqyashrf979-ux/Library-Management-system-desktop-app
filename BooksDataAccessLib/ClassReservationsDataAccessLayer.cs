@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BooksDataAccessLib
@@ -12,7 +13,7 @@ namespace BooksDataAccessLib
     public class clsReservationsDataAccessLayer
     {
         static public bool Find(int Id, ref int MemberID, ref int BookID
-        , ref DateTime ReservationDate , ref bool Availibilty)
+        , ref DateTime ReservationDate, ref bool Availibilty)
         {
             string Query = "select * from Reservations where ReservationID =@Id";
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
@@ -27,13 +28,13 @@ namespace BooksDataAccessLib
                     BookID = (int)reader["BookID"];
                     ReservationDate = (DateTime)reader["ReservationDate"];
                     Availibilty = (bool)reader["Availibilty"];
-                    
+
                     return true;
                 }
                 return false;
             }
         }
-        static public int AddReservation(int MemberID, int BookID, DateTime ReservationDate , bool Availibilty)
+        static public int AddReservation(int MemberID, int BookID, DateTime ReservationDate, bool Availibilty)
         {
             string Query = "INSERT INTO Reservations\r\n(\r\n " +
                 "     MemberID,\r\n    BookID,\r\n    ReservationDate,\r\n Availibilty )\r\n" +
@@ -56,7 +57,7 @@ namespace BooksDataAccessLib
             }
         }
 
-        static public bool UpdateReservation(int ID, int MemberID, int BookID, DateTime ReservationDate , bool Availibilty)
+        static public bool UpdateReservation(int ID, int MemberID, int BookID, DateTime ReservationDate, bool Availibilty)
         {
             string Query = "Update Reservations " +
                 "set MemberID =@MemberID ," +
@@ -145,9 +146,9 @@ namespace BooksDataAccessLib
 
 
 
-        
+
         }
-        static public DataTable FilterAndSearchForReservationsByAvailibilty(int memberID,bool Availibilty)
+        static public DataTable FilterAndSearchForReservationsByAvailibilty(int memberID, bool Availibilty)
         {
             DataTable dt = new DataTable();
             string Query = "select Reservations.ReservationID  as Reservation_ID ," +
@@ -172,7 +173,7 @@ namespace BooksDataAccessLib
             }
             return dt;
         }
-        static public DataTable FilterByAvailibilty( bool Availibilty)
+        static public DataTable FilterByAvailibilty(bool Availibilty)
         {
             DataTable dt = new DataTable();
             string Query = "select Reservations.ReservationID  as Reservation_ID ," +
@@ -187,7 +188,7 @@ namespace BooksDataAccessLib
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
 
-             
+
 
                 command.Parameters.Add("@Availibilty", SqlDbType.Bit).Value = Availibilty;
                 connection.Open();
@@ -196,6 +197,31 @@ namespace BooksDataAccessLib
                     dt.Load(reader);
             }
             return dt;
+        }
+        static public int Count()
+        {
+            string Query = "select count(*) from Reservations ";
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            using (SqlCommand commmand = new SqlCommand(Query, connection))
+            {
+                connection.Open();
+                object Result = commmand.ExecuteScalar();
+                return (Result != null) ? Convert.ToInt32(Result) : 0;
+
+            }
+        }
+        static public bool UpdateReservationAvailibilty()
+        {
+            string Query = "UPDATE R\r\nSET R.Availibilty = 1\r\nFROM Reservations R" +
+                "\r\nINNER JOIN Books B ON R.BookID = B.BookID\r\nWHERE B.Quantity > 0;";
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.connectionString))
+            using (SqlCommand commmand = new SqlCommand(Query, conn))
+            {
+                conn.Open();
+                return (bool)(commmand.ExecuteNonQuery() > 0);
+            }
+
         }
     }
 }

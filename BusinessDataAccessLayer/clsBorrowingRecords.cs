@@ -12,7 +12,7 @@ namespace BusinessDataAccessLayer
     {
         enum enMode { AddMode = 1, EditMode = 2 };
         enMode Mode = enMode.AddMode;
-        private int BorrowingRecordID { set; get; }
+        public int BorrowingRecordID { set; get; }
         public bool Status { set; get; }
         public int MemberID { set; get; }
         public int BookID { set; get; }

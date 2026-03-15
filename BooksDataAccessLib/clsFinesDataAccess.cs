@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,21 +13,21 @@ namespace BooksDataAccessLib
 {
     public class clsFinesDataAccess
     {
-        static public bool Find(int fineID, ref int MemberID, ref int BorrowingID, ref bool IsPaid
+        static public bool FindByBorrowingID(  int BorrowingID ,ref int FineID, ref bool IsPaid
       , ref string PaymentMethod , ref decimal PaymentAmount , ref short LateDays)
         {
-            string Query = "select * from Fines where FineID =@fineID";
+            string Query = "select * from Fines where BorrowingID =@BorrowingID";
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
 
                 connection.Open();
-                command.Parameters.Add("@fineID", SqlDbType.Int).Value = fineID;
+                command.Parameters.Add("@BorrowingID", SqlDbType.Int).Value = BorrowingID;
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    MemberID = (int)reader["MemberID"];
-                    BorrowingID = (int)reader["BorrowingID"];
+
+                    FineID = (int)reader["FineID"];
                     IsPaid = (bool)reader["IsPaid"];
                     PaymentMethod = (reader["PaymentMethod"] == DBNull.Value ? "" : (string)reader["PaymentMethod"]);
                     PaymentAmount = (decimal)reader["PaymentAmount"];
@@ -39,39 +40,25 @@ namespace BooksDataAccessLib
             }
         }
 
-        static public int AddFine(int MemberID, int BorrowingID, bool IsPaid, string PaymentMethod , decimal PaymentAmount,short LateDays)
+        static public int AddFine(int BorrowingID, bool IsPaid, decimal PaymentAmount ,short LateDays)
         {
-            string Query = "INSERT INTO Fines \r\n(\r\n " +
-                "   MemberID,\r\n    BorrowingID,\r\n    IsPaid,\r\n    PaymentMethod, PaymentAmount , LateDays\r\n)\r\n" +
-                "VALUES\r\n(\r\n" +
-                "    @MemberID,\r\n    @BorrowingID,\r\n    @IsPaid,\r\n    @PaymentMethod , @PaymentAmount ,@LateDays\r\n);\r\n\r\nSELECT SCOPE_IDENTITY();";
+            string Query = " INSERT INTO Fines (BorrowingID, IsPaid, PaymentAmount, LateDays)" +
+                "Values (@BorrowingID , @IsPaid , @PaymentMethod ,@LateDays) ; select SCOPE_IDENTITY();" ;
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
-                command.Parameters.Add("@IsPaid", System.Data.SqlDbType.Bit).Value = IsPaid;
-                command.Parameters.Add("@MemberID", System.Data.SqlDbType.Int).Value = MemberID;
-                command.Parameters.Add("@BorrowingID", System.Data.SqlDbType.Int).Value = BorrowingID;
-                if(string.IsNullOrEmpty(PaymentMethod))
-                    command.Parameters.Add("@PaymentMethod", System.Data.SqlDbType.NVarChar).Value = DBNull.Value;
-                else
-                    command.Parameters.Add("@PaymentMethod", System.Data.SqlDbType.NVarChar).Value = PaymentMethod;
-                command.Parameters.Add("@LateDays", System.Data.SqlDbType.SmallInt).Value = LateDays;
-                command.Parameters.Add("@PaymentAmount",SqlDbType.Decimal).Value = PaymentAmount;
+                command.Parameters.Add("@BorrowingID",SqlDbType.Int).Value = BorrowingID ;
+                command.Parameters.Add("@IsPaid", SqlDbType.Bit).Value = IsPaid; 
+                command.Parameters.Add("@PaymentAmount", SqlDbType.Decimal).Value = PaymentAmount;
+                command.Parameters.Add("@LateDays", SqlDbType.SmallInt).Value = LateDays;
                 connection.Open();
-                object Result = command.ExecuteScalar();
-                if (Result != null && int.TryParse(Result.ToString(), out int NewID))
-                {
-                    return NewID;
-                }
-                return -1;
+                return  (int)command.ExecuteScalar();
             }
         }
-
-        static public bool UpdateFineRecord(int FineID,int MemberID, int BorrowingID, bool IsPaid, string PaymentMethod,decimal PaymentAmount, short LateDays)
+        static public bool UpdateFineRecord(int FineID, int BorrowingID, bool IsPaid, string PaymentMethod,decimal PaymentAmount, short LateDays)
         {
             string Query = "Update Fines " +
-                "set MemberID =@MemberID ," +
-                "BorrowingID = @BorrowingID," +
+                "set BorrowingID = @BorrowingID," +
                 "IsPaid =@IsPaid," +
                 "PaymentMethod =@PaymentMethod ," +
                 "PaymentAmount = @PaymentAmount ," +
@@ -81,14 +68,13 @@ namespace BooksDataAccessLib
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
                 command.Parameters.Add("@FineID", System.Data.SqlDbType.Int).Value = FineID;
-                command.Parameters.Add("@MemberID", System.Data.SqlDbType.Int).Value = MemberID;
+               
                 command.Parameters.Add("@BorrowingID", System.Data.SqlDbType.Int).Value = BorrowingID;
                 command.Parameters.Add("@IsPaid", System.Data.SqlDbType.Bit).Value = IsPaid;
                 if (string.IsNullOrEmpty(PaymentMethod))
                     command.Parameters.Add("@PaymentMethod", System.Data.SqlDbType.NVarChar).Value = DBNull.Value;
                 else
-                    command.Parameters.Add("@PaymentMethod", System.Data.SqlDbType.NVarChar).Value = PaymentMethod;   
-
+                    command.Parameters.Add("@PaymentMethod", System.Data.SqlDbType.NVarChar).Value = PaymentMethod;  
                 command.Parameters.Add("@PaymentAmount", System.Data.SqlDbType.Decimal).Value = PaymentAmount;
                 command.Parameters.Add("@LateDays", System.Data.SqlDbType.SmallInt).Value = LateDays;
                 connection.Open();
@@ -112,7 +98,9 @@ namespace BooksDataAccessLib
         static public DataTable GetAllFineRecords()
         {
             DataTable dt = new DataTable();
-            string Query = "Select * from Fines ";
+            string Query = "\r\nselect M.Name as Member_Name , M.MemberCardID ,B.ArabicName as Book_Arabic_Title , B.EnglishName Book_English_Title  ," +
+                " \r\nBR.BorrowingDate , F.LateDays , F.PaymentAmount from Fines F\r\ninner join BorrowingRecords BR on F.BorrowingID = BR.ID" +
+                "\r\ninner join Members M on M.MemberID = BR.MemberID\r\ninner join Books B on B.BookID = BR.BookID ";
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
@@ -129,7 +117,7 @@ namespace BooksDataAccessLib
 
         static public bool DoesFineRecordExist(int ID)
         {
-            string Query = "select FineID from Fines where FineID =@ID";
+            string Query = "select borrowingID from Fines where borrowingID =@ID";
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
@@ -137,9 +125,22 @@ namespace BooksDataAccessLib
                 connection.Open();
                 object Result = command.ExecuteScalar();
                 return (Result != null ? true : false);
-
             }
         }
+
+        static public void UpdatePaymentsAndLateDaysForAllFines()
+        {
+            string Query = "UPDATE F\r\nSET LateDays = DATEDIFF(DAY, B.ReturningDate, GETDATE()),\r\n " +
+                "   PaymentAmount = 5 * DATEDIFF(DAY, B.ReturningDate, GETDATE())\r\nFROM Fines F\r\n" +
+                "INNER JOIN BorrowingRecords B \r\nON B.ID = F.BorrowingID;";
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            using (SqlCommand command = new SqlCommand(Query, connection))
+            {
+                connection.Open();
+                  command.ExecuteNonQuery() ;
+            }
+        }
+
 
     }
 }

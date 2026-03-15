@@ -20,3 +20,4 @@ F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.Sho
 F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.FrmLendBook.resources
 F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.FrmShowMemberForLendingPurpose.resources
 F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.ReserveBook.resources
+F:\Ado.Net\Library Management System 2\obj\Debug\Library_Management_System_2.PaymentForm.resources

@@ -80,7 +80,7 @@ namespace Library_Management_System_2
         }
         private void button2_Click(object sender, EventArgs e)
         {
-
+            pictureBox10.Visible = true;
             btnRefresh.Visible = true;
             pictureBox10.Visible = true;
             switch (SearchMode)
@@ -127,6 +127,8 @@ namespace Library_Management_System_2
         }
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            pictureBox10.Visible = false;   
+            pictureBox12.Visible = false;
             Refresh();
         }
 
@@ -168,6 +170,7 @@ namespace Library_Management_System_2
         }
         private void btnSearchmember_Click(object sender, EventArgs e)
         {
+            pictureBox8.Visible = true;
             btnMembersRefresh.Visible = true;
             pictureBox8.Visible = true;
 
@@ -345,7 +348,6 @@ namespace Library_Management_System_2
             {
                 MessageBox.Show("This record is not found . ", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             else
             {
                 clsBorrowingRecords Record = clsBorrowingRecords.Find(ID);
@@ -356,8 +358,44 @@ namespace Library_Management_System_2
                 else
                 {
 
-                    Record.Status = true;
+                    short LateDays = (short)(DateTime.Now - Record.ReturningDate).Days;
                     clsBooks Book = clsBooks.FindBook(Record.BookID);
+                    if( LateDays> 0)
+                    {
+
+                        if (clsFines.DoesRecordExist(ID))
+                        {
+                            {
+                                // in case the fine already exists in db but never paid . 
+                                // this happens you someone intends to pay the fine but then hesitates .
+                                PaymentForm payment = new PaymentForm(ID);
+                                payment.ShowDialog();
+                            }
+                        }
+                        else
+                        {
+                            // in case someone is about to return his book and ready to pay the fine .
+                            clsFines Fine = new clsFines();
+                            Fine.LateDays = LateDays ;
+                            Fine.PaymentAmount = LateDays * 5;
+                            Fine.BorrowingID = Record.BorrowingRecordID;
+                            if (!Fine.Save())
+                            {
+                                MessageBox.Show("Fine was not added . ", "Error .", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            if (MessageBox.Show("Would you love to Pay the fine ?! . ", "Question .", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                            {
+                                PaymentForm payment = new PaymentForm(ID);
+                                payment.ShowDialog();
+
+                            }
+
+                        }
+                      
+                     
+                }
+                    
                     if (Book.BookArabicName != string.Empty)
                     {
                         Book.Quantity++;
@@ -365,6 +403,7 @@ namespace Library_Management_System_2
                         {
                             if (Book.Save())
                             {
+                                Record.Status = true;
                                 if (Record.Save())
                                 {
                                     MessageBox.Show("Book was returned . ", "Confirm .", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -475,6 +514,7 @@ namespace Library_Management_System_2
 
         private void btnSearchmemberByCardIDForBorrowingRecords_Click(object sender, EventArgs e)
         {
+            pictureBox12.Visible = true;
             btnRefrshBorrowingRecordTable.Visible = true;
             pictureBox13.Visible = true;
         }
@@ -525,7 +565,8 @@ namespace Library_Management_System_2
 
         private void btnRefrshBorrowingRecordTable_Click_1(object sender, EventArgs e)
         {
-
+            pictureBox13.Visible = false;
+            btnRefrshBorrowingRecordTable.Visible = false;
         }
 
         private void btnRefreshReservations_Click(object sender, EventArgs e)
@@ -534,6 +575,7 @@ namespace Library_Management_System_2
             btnRefreshReservations.Visible = false;
             txtMemberCardIDReservations.Text = string.Empty;
             cbFilterReservations.SelectedIndex = 0;
+            pictureBox15.Visible=false;
         }
 
         private void cbFilterReservations_SelectedIndexChanged(object sender, EventArgs e)
@@ -569,6 +611,8 @@ namespace Library_Management_System_2
             btnRefreshReservations.Visible = false;
             cbFilterReservations.SelectedIndex = 0;
             pictureBox15.Visible = false;
+            RefreshAvailibilityINReservationTable();
+
         }
 
         private int GetBookIDForLendingFromReservation()
@@ -596,11 +640,24 @@ namespace Library_Management_System_2
                 Refresh();
             }
         }
-
+        private void RefreshAvailibilityINReservationTable()
+        {
+            clsReservations.UpdateReservationsAvailibility();
+        }
         private void tabPage2_Enter(object sender, EventArgs e)
         {
             btnSearchmember.BackgroundImage = null;
             pictureBox8.Visible = false;
+        }
+
+        private void ContectMenueStripBorrwoingRecords_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void dgvBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
