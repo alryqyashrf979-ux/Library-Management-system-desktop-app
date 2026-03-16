@@ -53,7 +53,7 @@ namespace Library_Management_System_2
             }
             else
             {
-                MessageBox.Show("Fine was paid successfully . ", "Error .", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                MessageBox.Show("Fine was paid successfully . ", "Error .", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             }
             Close();
         }

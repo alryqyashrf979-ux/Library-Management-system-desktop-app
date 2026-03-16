@@ -478,34 +478,7 @@ namespace Library_Management_System_2
             cbFilterBorrowingREcords.SelectedIndex = 0;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (cbFilterBorrowingREcords.SelectedIndex)
-            {
-                case 0:
-                    {
-                        cbFilterBorrowingREcords.SelectedIndex = 0;
-                        FilterBorrowingRecords = enFilterRecordsBy.None;
-                        dgvBorrowingRecords.DataSource = clsBorrowingRecords.GetAllBorrowingRecords();
-                        break;
-                    }
-                case 1:
-                    {
-                        cbFilterBorrowingREcords.SelectedIndex = 1;
-                        FilterBorrowingRecords = enFilterRecordsBy.Returned;
-                        dgvBorrowingRecords.DataSource = clsBorrowingRecords.FilterRecordsByStatus(true);
-                        break;
-                    }
-                case 2:
-                    {
-                        cbFilterBorrowingREcords.SelectedIndex = 2;
-                        FilterBorrowingRecords = enFilterRecordsBy.Not_Returned;
-                        dgvBorrowingRecords.DataSource = clsBorrowingRecords.FilterRecordsByStatus(false);
-                        break;
-                    }
-            }
-
-        }
+ 
 
         private void txtSerachByMemberCardIDForBorrowingRecord_TextChanged(object sender, EventArgs e)
         {
@@ -658,6 +631,34 @@ namespace Library_Management_System_2
         private void dgvBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cbFilterBorrowingREcords_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbFilterBorrowingREcords.SelectedIndex)
+            {
+                case 0:
+                    {
+                        cbFilterBorrowingREcords.SelectedIndex = 0;
+                        FilterBorrowingRecords = enFilterRecordsBy.None;
+                        dgvBorrowingRecords.DataSource = clsBorrowingRecords.GetAllBorrowingRecords();
+                        break;
+                    }
+                case 1:
+                    {
+                        cbFilterBorrowingREcords.SelectedIndex = 1;
+                        FilterBorrowingRecords = enFilterRecordsBy.Returned;
+                        dgvBorrowingRecords.DataSource = clsBorrowingRecords.FilterRecordsByStatus(true);
+                        break;
+                    }
+                case 2:
+                    {
+                        cbFilterBorrowingREcords.SelectedIndex = 2;
+                        FilterBorrowingRecords = enFilterRecordsBy.Not_Returned;
+                        dgvBorrowingRecords.DataSource = clsBorrowingRecords.FilterRecordsByStatus(false);
+                        break;
+                    }
+            }
         }
     }
 }

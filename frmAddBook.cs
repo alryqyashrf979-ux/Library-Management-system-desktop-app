@@ -129,6 +129,7 @@ namespace Library_Management_System_2
             {
                 pictureBox1.Load(openFileDialog1.FileName);
                 _PicPath = openFileDialog1.FileName;
+                LLBRemoveImage.Visible = true;
             }
         }
 
@@ -181,6 +182,7 @@ namespace Library_Management_System_2
         {
             _PicPath = "";
             pictureBox1.Image = Properties.Resources.Book;
+            LLBRemoveImage.Visible = false;
         }
     }
 }

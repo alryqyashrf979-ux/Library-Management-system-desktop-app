@@ -259,7 +259,7 @@
             this.btnSearchmember.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorProvider1.SetIconAlignment(this.btnSearchmember, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.btnSearchmember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchmember.Location = new System.Drawing.Point(887, 49);
+            this.btnSearchmember.Location = new System.Drawing.Point(880, 36);
             this.btnSearchmember.Name = "btnSearchmember";
             this.btnSearchmember.Size = new System.Drawing.Size(113, 40);
             this.btnSearchmember.TabIndex = 12;
@@ -292,7 +292,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::Library_Management_System_2.Properties.Resources.Refrsh;
-            this.pictureBox15.Location = new System.Drawing.Point(697, 20);
+            this.pictureBox15.Location = new System.Drawing.Point(695, 43);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(43, 35);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -302,7 +302,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Library_Management_System_2.Properties.Resources.Search;
-            this.pictureBox14.Location = new System.Drawing.Point(382, 117);
+            this.pictureBox14.Location = new System.Drawing.Point(382, 110);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(43, 35);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -311,14 +311,15 @@
             // 
             // btnSearchReservations
             // 
+            this.btnSearchReservations.BackColor = System.Drawing.Color.DarkGray;
             this.btnSearchReservations.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchReservations.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchReservations.Location = new System.Drawing.Point(444, 117);
+            this.btnSearchReservations.Location = new System.Drawing.Point(444, 110);
             this.btnSearchReservations.Name = "btnSearchReservations";
             this.btnSearchReservations.Size = new System.Drawing.Size(113, 35);
             this.btnSearchReservations.TabIndex = 26;
             this.btnSearchReservations.Text = "Search";
-            this.btnSearchReservations.UseVisualStyleBackColor = true;
+            this.btnSearchReservations.UseVisualStyleBackColor = false;
             this.btnSearchReservations.Click += new System.EventHandler(this.btnSearchReservations_Click);
             // 
             // dgvReservations
@@ -346,7 +347,7 @@
             "None",
             "Returned",
             "Not Returned"});
-            this.cbFilterReservations.Location = new System.Drawing.Point(1155, 18);
+            this.cbFilterReservations.Location = new System.Drawing.Point(1153, 41);
             this.cbFilterReservations.Name = "cbFilterReservations";
             this.cbFilterReservations.Size = new System.Drawing.Size(155, 32);
             this.cbFilterReservations.TabIndex = 24;
@@ -356,7 +357,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1025, 23);
+            this.label6.Location = new System.Drawing.Point(1023, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 24);
             this.label6.TabIndex = 23;
@@ -364,20 +365,21 @@
             // 
             // btnRefreshReservations
             // 
+            this.btnRefreshReservations.BackColor = System.Drawing.Color.DarkGray;
             this.btnRefreshReservations.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefreshReservations.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshReservations.Location = new System.Drawing.Point(746, 20);
+            this.btnRefreshReservations.Location = new System.Drawing.Point(744, 43);
             this.btnRefreshReservations.Name = "btnRefreshReservations";
             this.btnRefreshReservations.Size = new System.Drawing.Size(107, 35);
             this.btnRefreshReservations.TabIndex = 21;
             this.btnRefreshReservations.Text = "Refresh.";
-            this.btnRefreshReservations.UseVisualStyleBackColor = true;
+            this.btnRefreshReservations.UseVisualStyleBackColor = false;
             this.btnRefreshReservations.Visible = false;
             this.btnRefreshReservations.Click += new System.EventHandler(this.btnRefreshReservations_Click);
             // 
             // txtMemberCardIDReservations
             // 
-            this.txtMemberCardIDReservations.Location = new System.Drawing.Point(382, 23);
+            this.txtMemberCardIDReservations.Location = new System.Drawing.Point(380, 46);
             this.txtMemberCardIDReservations.Name = "txtMemberCardIDReservations";
             this.txtMemberCardIDReservations.Size = new System.Drawing.Size(214, 32);
             this.txtMemberCardIDReservations.TabIndex = 18;
@@ -386,7 +388,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(67, 23);
+            this.label7.Location = new System.Drawing.Point(65, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(297, 24);
             this.label7.TabIndex = 19;
@@ -395,7 +397,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Library_Management_System_2.Properties.Resources.filter;
-            this.pictureBox5.Location = new System.Drawing.Point(992, 23);
+            this.pictureBox5.Location = new System.Drawing.Point(990, 46);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(27, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -405,7 +407,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Library_Management_System_2.Properties.Resources.Search;
-            this.pictureBox6.Location = new System.Drawing.Point(34, 23);
+            this.pictureBox6.Location = new System.Drawing.Point(32, 46);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(27, 24);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -437,7 +439,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Library_Management_System_2.Properties.Resources.Refrsh;
-            this.pictureBox13.Location = new System.Drawing.Point(679, 33);
+            this.pictureBox13.Location = new System.Drawing.Point(679, 28);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(46, 35);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -465,6 +467,7 @@
             this.cbFilterBorrowingREcords.Name = "cbFilterBorrowingREcords";
             this.cbFilterBorrowingREcords.Size = new System.Drawing.Size(155, 29);
             this.cbFilterBorrowingREcords.TabIndex = 25;
+            this.cbFilterBorrowingREcords.SelectedIndexChanged += new System.EventHandler(this.cbFilterBorrowingREcords_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -478,19 +481,21 @@
             // 
             // btnRefrshBorrowingRecordTable
             // 
+            this.btnRefrshBorrowingRecordTable.BackColor = System.Drawing.Color.DarkGray;
             this.btnRefrshBorrowingRecordTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefrshBorrowingRecordTable.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrshBorrowingRecordTable.Location = new System.Drawing.Point(744, 33);
+            this.btnRefrshBorrowingRecordTable.Location = new System.Drawing.Point(744, 28);
             this.btnRefrshBorrowingRecordTable.Name = "btnRefrshBorrowingRecordTable";
             this.btnRefrshBorrowingRecordTable.Size = new System.Drawing.Size(104, 35);
             this.btnRefrshBorrowingRecordTable.TabIndex = 22;
             this.btnRefrshBorrowingRecordTable.Text = "Refresh.";
-            this.btnRefrshBorrowingRecordTable.UseVisualStyleBackColor = true;
+            this.btnRefrshBorrowingRecordTable.UseVisualStyleBackColor = false;
             this.btnRefrshBorrowingRecordTable.Visible = false;
             this.btnRefrshBorrowingRecordTable.Click += new System.EventHandler(this.btnRefrshBorrowingRecordTable_Click_1);
             // 
             // btnSearchmemberByCardIDForBorrowingRecords
             // 
+            this.btnSearchmemberByCardIDForBorrowingRecords.BackColor = System.Drawing.Color.DarkGray;
             this.btnSearchmemberByCardIDForBorrowingRecords.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchmemberByCardIDForBorrowingRecords.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchmemberByCardIDForBorrowingRecords.Location = new System.Drawing.Point(426, 88);
@@ -498,7 +503,7 @@
             this.btnSearchmemberByCardIDForBorrowingRecords.Size = new System.Drawing.Size(116, 35);
             this.btnSearchmemberByCardIDForBorrowingRecords.TabIndex = 21;
             this.btnSearchmemberByCardIDForBorrowingRecords.Text = "Search";
-            this.btnSearchmemberByCardIDForBorrowingRecords.UseVisualStyleBackColor = true;
+            this.btnSearchmemberByCardIDForBorrowingRecords.UseVisualStyleBackColor = false;
             this.btnSearchmemberByCardIDForBorrowingRecords.Click += new System.EventHandler(this.btnSearchmemberByCardIDForBorrowingRecords_Click);
             // 
             // txtSerachByMemberCardID
@@ -585,7 +590,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::Library_Management_System_2.Properties.Resources.Add;
-            this.pictureBox16.Location = new System.Drawing.Point(584, 130);
+            this.pictureBox16.Location = new System.Drawing.Point(577, 106);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(44, 40);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -595,7 +600,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Library_Management_System_2.Properties.Resources.Refrsh;
-            this.pictureBox8.Location = new System.Drawing.Point(1156, 47);
+            this.pictureBox8.Location = new System.Drawing.Point(1149, 34);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(58, 41);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -605,7 +610,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Library_Management_System_2.Properties.Resources.Search;
-            this.pictureBox7.Location = new System.Drawing.Point(826, 48);
+            this.pictureBox7.Location = new System.Drawing.Point(819, 35);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(44, 40);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -633,32 +638,34 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.DarkGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(634, 130);
+            this.button2.Location = new System.Drawing.Point(627, 106);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(151, 40);
             this.button2.TabIndex = 11;
             this.button2.Text = "Add member";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // btnMembersRefresh
             // 
+            this.btnMembersRefresh.BackColor = System.Drawing.Color.DarkGray;
             this.btnMembersRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMembersRefresh.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMembersRefresh.Location = new System.Drawing.Point(1219, 47);
+            this.btnMembersRefresh.Location = new System.Drawing.Point(1212, 34);
             this.btnMembersRefresh.Name = "btnMembersRefresh";
             this.btnMembersRefresh.Size = new System.Drawing.Size(113, 40);
             this.btnMembersRefresh.TabIndex = 10;
             this.btnMembersRefresh.Text = "Refresh.";
-            this.btnMembersRefresh.UseVisualStyleBackColor = true;
+            this.btnMembersRefresh.UseVisualStyleBackColor = false;
             this.btnMembersRefresh.Visible = false;
             this.btnMembersRefresh.Click += new System.EventHandler(this.btnMembersRefresh_Click);
             // 
             // txtSearchMember
             // 
-            this.txtSearchMember.Location = new System.Drawing.Point(585, 56);
+            this.txtSearchMember.Location = new System.Drawing.Point(578, 43);
             this.txtSearchMember.Name = "txtSearchMember";
             this.txtSearchMember.Size = new System.Drawing.Size(200, 28);
             this.txtSearchMember.TabIndex = 9;
@@ -675,7 +682,7 @@
             "Occupation",
             "Country name",
             ""});
-            this.cbsearchMemberBy.Location = new System.Drawing.Point(307, 55);
+            this.cbsearchMemberBy.Location = new System.Drawing.Point(300, 42);
             this.cbsearchMemberBy.Name = "cbsearchMemberBy";
             this.cbsearchMemberBy.Size = new System.Drawing.Size(214, 29);
             this.cbsearchMemberBy.TabIndex = 8;
@@ -685,7 +692,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(91, 56);
+            this.label3.Location = new System.Drawing.Point(84, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 28);
             this.label3.TabIndex = 7;
@@ -694,7 +701,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Library_Management_System_2.Properties.Resources.Search;
-            this.pictureBox2.Location = new System.Drawing.Point(42, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(35, 36);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -726,7 +733,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = global::Library_Management_System_2.Properties.Resources.Add;
-            this.pictureBox11.Location = new System.Drawing.Point(525, 113);
+            this.pictureBox11.Location = new System.Drawing.Point(525, 103);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(68, 40);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -755,18 +762,20 @@
             // 
             // btnAddBook
             // 
+            this.btnAddBook.BackColor = System.Drawing.Color.DarkGray;
             this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddBook.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddBook.Location = new System.Drawing.Point(599, 113);
+            this.btnAddBook.Location = new System.Drawing.Point(599, 103);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(152, 40);
             this.btnAddBook.TabIndex = 9;
             this.btnAddBook.Text = "Add Book";
-            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.UseVisualStyleBackColor = false;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.Color.DarkGray;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(1075, 42);
@@ -774,12 +783,13 @@
             this.btnRefresh.Size = new System.Drawing.Size(113, 35);
             this.btnRefresh.TabIndex = 8;
             this.btnRefresh.Text = "Refresh.";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Visible = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.DarkGray;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(829, 42);
@@ -787,7 +797,7 @@
             this.btnSearch.Size = new System.Drawing.Size(116, 35);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1

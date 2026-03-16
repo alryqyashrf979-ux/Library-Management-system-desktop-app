@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "F:\\Ado.Net\\Library Management System 2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|f:\\ado.net\\library management system 2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|F:\\Ado.Net\\Library Management System 2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{388394C7-E9A7-43D0-82EA-A7C17D4BEF6C}|BusinessDataAccessLayer\\LibBusinessLayer.csproj|F:\\Ado.Net\\Library Management System 2\\businessdataaccesslayer\\clsfines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{388394C7-E9A7-43D0-82EA-A7C17D4BEF6C}|BusinessDataAccessLayer\\LibBusinessLayer.csproj|solutionrelative:businessdataaccesslayer\\clsfines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|F:\\Ado.Net\\Library Management System 2\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|F:\\Ado.Net\\Library Management System 2\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|f:\\ado.net\\library management system 2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC194D6-E83D-40F1-BAA5-5871370752BE}|BooksDataAccessLib\\LibDataAccessLib.csproj|f:\\ado.net\\library management system 2\\booksdataaccesslib\\clsfinesdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC194D6-E83D-40F1-BAA5-5871370752BE}|BooksDataAccessLib\\LibDataAccessLib.csproj|solutionrelative:booksdataaccesslib\\clsfinesdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|f:\\ado.net\\library management system 2\\frmaddmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:frmaddmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|f:\\ado.net\\library management system 2\\frmaddmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:frmaddmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|F:\\Ado.Net\\Library Management System 2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|f:\\ado.net\\library management system 2\\frmaddbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:frmaddbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|f:\\ado.net\\library management system 2\\frmaddbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34B6992A-893F-410C-9FE9-802CAE957598}|Library Management System 2.csproj|solutionrelative:frmaddbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{388394C7-E9A7-43D0-82EA-A7C17D4BEF6C}|BusinessDataAccessLayer\\LibBusinessLayer.csproj|F:\\Ado.Net\\Library Management System 2\\businessdataaccesslayer\\clsfines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{388394C7-E9A7-43D0-82EA-A7C17D4BEF6C}|BusinessDataAccessLayer\\LibBusinessLayer.csproj|solutionrelative:businessdataaccesslayer\\clsfines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +50,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "FrmAddMember.cs",
+              "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\FrmAddMember.cs",
+              "RelativeDocumentMoniker": "FrmAddMember.cs",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\FrmAddMember.cs",
+              "RelativeToolTip": "FrmAddMember.cs",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAuwHIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:25:49.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmAddMember.cs [Design]",
+              "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\FrmAddMember.cs",
+              "RelativeDocumentMoniker": "FrmAddMember.cs",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\FrmAddMember.cs [Design]",
+              "RelativeToolTip": "FrmAddMember.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:24:53.488Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsFinesDataAccess.cs",
+              "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\BooksDataAccessLib\\clsFinesDataAccess.cs",
+              "RelativeDocumentMoniker": "BooksDataAccessLib\\clsFinesDataAccess.cs",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\BooksDataAccessLib\\clsFinesDataAccess.cs",
+              "RelativeToolTip": "BooksDataAccessLib\\clsFinesDataAccess.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAMwDUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:20:24.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmAddBook.cs",
+              "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\frmAddBook.cs",
+              "RelativeDocumentMoniker": "frmAddBook.cs",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\frmAddBook.cs",
+              "RelativeToolTip": "frmAddBook.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAAALgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:09:11.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmAddBook.cs [Design]",
+              "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\frmAddBook.cs",
+              "RelativeDocumentMoniker": "frmAddBook.cs",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\frmAddBook.cs [Design]",
+              "RelativeToolTip": "frmAddBook.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:09:05.621Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "clsFines.cs",
               "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\BusinessDataAccessLayer\\clsFines.cs",
               "RelativeDocumentMoniker": "BusinessDataAccessLayer\\clsFines.cs",
@@ -46,48 +129,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PaymentForm.cs",
               "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\PaymentForm.cs",
               "RelativeDocumentMoniker": "PaymentForm.cs",
-              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\PaymentForm.cs",
-              "RelativeToolTip": "PaymentForm.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAtwDEAAAAMAAAAAAAAAA==",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\PaymentForm.cs*",
+              "RelativeToolTip": "PaymentForm.cs*",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwDkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:42:30.614Z"
+              "WhenOpened": "2026-03-14T22:42:30.614Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PaymentForm.cs [Design]",
               "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\PaymentForm.cs",
               "RelativeDocumentMoniker": "PaymentForm.cs",
-              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\PaymentForm.cs [Design]",
-              "RelativeToolTip": "PaymentForm.cs [Design]",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\PaymentForm.cs [Design]*",
+              "RelativeToolTip": "PaymentForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:29:11.734Z"
+              "WhenOpened": "2026-03-14T22:29:11.734Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAwIIAAAApAAAAAAAAAA==",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAtwHIBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-21T23:15:24.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "F:\\Ado.Net\\Library Management System 2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\Form1.cs [Design]*",
-              "RelativeToolTip": "Form1.cs [Design]*",
+              "ToolTip": "F:\\Ado.Net\\Library Management System 2\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-21T23:15:22.406Z",
               "EditorCaption": " [Design]"

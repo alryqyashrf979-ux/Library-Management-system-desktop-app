@@ -111,14 +111,13 @@ namespace Library_Management_System_2
                 case enMemberFormMode.Update:
                     {
                         _UploadDataFromObjectToForm();
-                     
                         break;
                     }
                 case enMemberFormMode.Add:
                     {
-
                         comboBox1.SelectedIndex = 0;
                         cbGender.SelectedIndex = 0;
+                        LLBRemoveMemberImage.Visible = false;
                         break;
                     }
             }
@@ -150,6 +149,7 @@ namespace Library_Management_System_2
             {
                 PicPath = openFileDialog1.FileName;
                 pBMember.Load(PicPath);
+                LLBRemoveMemberImage.Visible = true;
             }
         }
  
@@ -365,6 +365,7 @@ namespace Library_Management_System_2
             PicPath=String.Empty; 
             Member.PicPath = String.Empty;
             pBMember.Image = Properties.Resources.Person2;
+            LLBRemoveMemberImage.Visible = false;
         }
     }
 }

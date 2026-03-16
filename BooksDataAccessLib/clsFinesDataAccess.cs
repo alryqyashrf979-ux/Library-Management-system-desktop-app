@@ -43,7 +43,7 @@ namespace BooksDataAccessLib
         static public int AddFine(int BorrowingID, bool IsPaid, decimal PaymentAmount ,short LateDays)
         {
             string Query = " INSERT INTO Fines (BorrowingID, IsPaid, PaymentAmount, LateDays)" +
-                "Values (@BorrowingID , @IsPaid , @PaymentMethod ,@LateDays) ; select SCOPE_IDENTITY();" ;
+                "Values (@BorrowingID , @IsPaid , @PaymentAmount ,@LateDays) ; select SCOPE_IDENTITY();" ;
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
@@ -52,7 +52,7 @@ namespace BooksDataAccessLib
                 command.Parameters.Add("@PaymentAmount", SqlDbType.Decimal).Value = PaymentAmount;
                 command.Parameters.Add("@LateDays", SqlDbType.SmallInt).Value = LateDays;
                 connection.Open();
-                return  (int)command.ExecuteScalar();
+                return  Convert.ToInt32( command.ExecuteScalar());
             }
         }
         static public bool UpdateFineRecord(int FineID, int BorrowingID, bool IsPaid, string PaymentMethod,decimal PaymentAmount, short LateDays)
