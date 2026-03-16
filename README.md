@@ -1,2 +1,2 @@
 # Library-Management-system-desktop-app
-a learning project to build desktop system.
+a learning project to build a small desktop system.
